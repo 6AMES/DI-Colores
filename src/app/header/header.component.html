@@ -68,4 +68,522 @@
             </li>
         </ul>
     </div>
+
+    <div id="header-menu">
+        <div id="menu-selec">
+            <div id="menu-btns">
+                <button class="menu-btn" id="m-1" (click)="setActive('m-1')" [ngClass]="{'active': activeButton === 'm-1'}">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#767676"><path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/></svg>
+                    <span>Productos</span>
+                </button>
+                <button class="menu-btn" id="m-2" (click)="setActive('m-2')" [ngClass]="{'active': activeButton === 'm-2'}">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#767676"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                    <span>Estancias</span>
+                </button>
+                <button class="menu-btn" id="m-3" (click)="setActive('m-3')" [ngClass]="{'active': activeButton === 'm-3'}">
+                    <span>Ahora en MOBLE</span>
+                </button>
+                <button class="menu-btn" id="m-4" (click)="setActive('m-4')" [ngClass]="{'active': activeButton === 'm-4'}">
+                    <span>Precios Especiales</span>
+                </button>
+                <button class="menu-btn" id="m-5" (click)="setActive('m-5')" [ngClass]="{'active': activeButton === 'm-5'}">
+                    <span>Inspiración y planificación</span>
+                </button>
+                <button class="menu-btn" id="m-6" (click)="setActive('m-6')" [ngClass]="{'active': activeButton === 'm-6'}">
+                    <span>Servicios</span>
+                </button>
+            </div>
+            <div id="separator"></div>
+        </div>
+        <div id="menu-classes">
+            <div class="prod-disp" *ngIf="activeButton === 'm-1'" id="p-1">
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/novedades.png" alt="">
+                        <span>Novedades</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/almacenaje.png" alt="">
+                        <span>Almacenaje y organización</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/camas.png" alt="">
+                        <span>Camas y colchones</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/textiles.png" alt="">
+                        <span>Textiles del hogar</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/muebles.png" alt="">
+                        <span>Muebles</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/bebes.png" alt="">
+                        <span>Bebés, niños y niñas</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/decoracion.png" alt="">
+                        <span>Decoración y espejos</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/iluminacion.png" alt="">
+                        <span>Iluminación</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/cocina.png" alt="">
+                        <span>Cocina y electrodomésticos</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/lavabo.png" alt="">
+                        <span>Muebles de baño y accesorios</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/colada.png" alt="">
+                        <span>Colada y limpieza</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/plantas.png" alt="">
+                        <span>Macetas, plantas y jardinería</span>
+                    </a>
+                </div>
+            </div>
+            <div class="prod-disp" *ngIf="activeButton === 'm-2'" id="p-2">
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/dormitorio.png" alt="">
+                        <span>Dormitorio</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/juvenil.png" alt="">
+                        <span>Habitación infantil y juvenil</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/salon.png" alt="">
+                        <span>Salón</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/comedor.png" alt="">
+                        <span>Comedor</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/cocina2.png" alt="">
+                        <span>Cocina</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/banyo.png" alt="">
+                        <span>Baño</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/recibidor.png" alt="">
+                        <span>Recibidor</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/trabajo.png" alt="">
+                        <span>Espacios de trabajo y estudio</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/terraza.png" alt="">
+                        <span>Jardín, terraza y balcón</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/lavadero.png" alt="">
+                        <span>Lavadero</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/trastero.png" alt="">
+                        <span>Trastero</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="">
+                        <img src="../../assets/images/menu/empresas.png" alt="">
+                        <span>MOBLE para Empresas</span>
+                    </a>
+                </div>
+            </div>
+            <div class="prod-disp" *ngIf="activeButton === 'm-3'" id="p-3">
+                <nav class="menu-nav">
+                    <ul class="section">
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Novedades
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                MOBLE para Empresas
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Mercado Circular
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Comer en MOBLE
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Novedades</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Nuevos productos
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Ideas para regalar
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                MOBLE en directo
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Colecciones</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Colección TRES CREUS
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Más colecciones
+                            </a>
+                        </li>
+                    </ul>
+                    <a id="box-1" class="section box-message" href="">
+                        <h3>Descubre la nueva colección TRES CREUS</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </nav>
+            </div>
+            <div class="prod-disp" *ngIf="activeButton === 'm-4'" id="p-4">
+                <nav class="menu-nav">
+                    <ul class="section">
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Precios Especiales
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Hemos bajado el precio
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Accesorios asequibles
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Ofertas</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Ofertas MOBLE Family
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Ofertas MOBLE para Empresas
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Recompensas MOBLE Family
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Nuestros mejores precios</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Hemos bajado el precio
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Nuestros precios más bajos
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Outlet
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Mercado circular: segunda mano</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Comprueba muebles de segunda mano
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Vende tus muebles de segunda mano
+                            </a>
+                        </li>
+                    </ul>
+                    <a id="box-2" class="section box-message" href="">
+                        <h3>Tienda de muebles de segunda mano</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </nav>
+            </div>
+            <div class="prod-disp" *ngIf="activeButton === 'm-5'" id="p-5">
+                <nav class="menu-nav">
+                    <ul class="section">
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Ideas
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Servicio de planificación
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Planificadores online
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Inspiración e ideas</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Inspiración por estancias
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Inspiración para empresas
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Vida sostenible
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Planificadores 3D</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Crea tu composición de muebles
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Diseña tu estancia completa
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Diseña espacios a tu medida con MOBLE Creative
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Servicios de diseño</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Planificación de estancia completa
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Planificación para empresas
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Diseño de interiores para tu hogar
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Diseño de interiores para empresas
+                            </a>
+                        </li>
+                    </ul>
+                    <a id="box-3" class="section box-message" href="">
+                        <h3>Diseña tu estancia con MOBLE Creative</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </nav>
+            </div>
+            <div class="prod-disp" *ngIf="activeButton === 'm-6'" id="p-6">
+                <nav class="menu-nav">
+                    <ul class="section">
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Todos nuestros servicios
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                MOBLE Home App
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Compra y vende con MOBLE preowned
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a class="main-link" href="">
+                                Pago y financiación
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Envío y montaje</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Seguimiento de tu pedido
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Envío a domicilio
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Click & Collect
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Montaje
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">Otras formas de comprar</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Compra por teléfono
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                MOBLE App
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Mercado circular: segunda mano
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                MOBLE preowned: Compra y vende entre particulares
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="section">
+                        <li class="section-link">
+                            <span class="link-title">MOBLE para Empresas</span>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Inspiración por sectores
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Ofertas exclusivas para empresas
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Diseño de interiores para empresas
+                            </a>
+                        </li>
+                        <li class="section-link">
+                            <a href="">
+                                Servicios para empresas
+                            </a>
+                        </li>
+                    </ul>
+                    <a id="box-4" class="section box-message" href="">
+                        <h3>MOBLE para Empresas: descubre las ventajas</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
 </header>

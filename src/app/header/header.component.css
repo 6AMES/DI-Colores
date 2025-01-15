@@ -81,6 +81,8 @@ span > span {
     padding: 0 3rem;
     display: flex;
     align-items: center;
+    position: relative;
+    box-sizing: border-box;
 }
 
 img {
@@ -144,7 +146,7 @@ input:focus {
     list-style: none;
 }
 
-li {
+#extras li {
     margin-left: 1rem;
 }
 
@@ -158,12 +160,12 @@ li {
     height: 2.5rem;
 }
 
-li:hover {
+#extras li:hover {
     border-radius: 50em;
     background-color: #dfdfdf;
 }
 
-li > a {
+#extras li > a {
     display: flex;
     width: 100%;
     height: 100%;
@@ -207,13 +209,14 @@ li > a {
     }
 
     #searchbar {
+        width: calc(100% - 6rem);
         position: absolute;
         bottom: 0;
-        width: 100%;
     }
 
     #bar-cont {
         margin: 0;
+        max-width: none;
     }
 
     #extras {
@@ -222,5 +225,220 @@ li > a {
 
     #logo, #extras {
         transform: translateY(-50%);
+    }
+}
+
+/* ------------------------------ 
+    HEADER-MENU 
+------------------------------ */
+
+#header-menu {
+    padding: 0 3rem;
+}
+
+#menu-selec {
+    width: fit-content;
+}
+
+#menu-btns {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem .25rem;
+    margin-inline-end: 1.5rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: none;
+    font-weight: 700;
+    color: #767676;
+    font-size: .875rem;
+    cursor: pointer;
+}
+
+.menu-btn > svg {
+    margin-inline-end: .5rem;
+}
+
+.menu-btn.active {
+    color: #111111;
+    cursor: default;
+    border-bottom: 3px solid #111111;
+    z-index: 10;
+}
+
+.menu-btn.active > svg {
+    fill: #111111;
+}
+
+#m-6 {
+    margin: 0;
+}
+
+#separator {
+    border-top: 1px solid #767676;
+    transform: translateY(-2px);
+}
+
+#menu-classes {
+    display: flex;
+    flex-direction: column;
+}
+  
+.prod-disp {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 0;
+    justify-items: center;
+    overflow-x: auto;
+}
+  
+.prod-disp.active {
+    display: grid;
+}
+
+.prod-disp::-webkit-scrollbar {
+    height: 2px;
+    padding: 1rem;
+}
+
+.prod-disp::-webkit-scrollbar-track {
+    background-color: #dfdfdf;
+    border-radius: 50em;
+    cursor: pointer;
+}
+
+.prod-disp::-webkit-scrollbar-thumb {
+    background-color: #111111;
+    border-radius: 50em;
+}
+
+.prod-disp:hover::-webkit-scrollbar {
+    height: 4px;
+}
+
+.prod-disp:hover::-webkit-scrollbar-thumb {
+    cursor: grab;
+}
+
+.prod-disp:active::-webkit-scrollbar-thumb {
+    cursor: grabbing;
+}
+
+.category {
+    text-align: center;
+    top: 0;
+}
+
+.category a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.category a:hover span {
+    text-decoration: underline;
+    color: #111111;
+}
+
+.category img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+  
+.category span {
+    color: #333;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.section {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-inline-end: 4rem;
+    max-width: 280px;
+}
+
+.section > .section-link {
+    margin-left: 0;
+    margin-top: .75rem;
+}
+
+.section-link > a {
+    color: #111111;
+    text-decoration: none;
+}
+
+.main-link {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.45;
+}
+
+.link-title {
+    font-weight: 700;
+}
+
+.section-link > a:hover {
+    text-decoration: underline;
+}
+
+.box-message {
+    margin: 0;
+    height: 182px;
+    width: 320px;
+}
+
+#box-1 {
+    background-color: #26547C;
+}
+
+#box-2 {
+    background-color: #E01E37;
+}
+
+#box-3 {
+    background-color: #FF9505;
+}
+
+#box-4 {
+    background-color: #2C6E49;
+}
+
+.box-message {
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-message:hover {
+    text-decoration: underline;
+}
+
+.box-message > h3 {
+    margin: 0;
+}
+
+.box-message > svg {
+    border: .5rem solid white;
+    border-radius: 50em;
+    background-color: white;
+}
+
+@media (max-width: 1200px) {
+    #header-menu {
+        display: none;
     }
 }
