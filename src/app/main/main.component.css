@@ -152,14 +152,18 @@ h2 {
     height: 100%;
 }
 
-#section-2 {
+#section-2, #section-5 {
     margin-top: 4rem;
     background-color: #f5f5f5;
     padding: 0 3rem;
 }
 
+#section-5 .redirection {
+    background-color: #00853e;
+}
+
 .gray-sect-cont {
-    padding-block: 4rem;
+    padding-block: 3rem;
 }
 
 .links-cont {
@@ -167,6 +171,7 @@ h2 {
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow-x: auto;
 }
 
 .links-cont > li {
@@ -174,6 +179,37 @@ h2 {
     height: auto;
     position: relative;
     margin-inline-end: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-width: 250px;
+}
+
+.links-cont::-webkit-scrollbar {
+    height: 2px;
+    padding: 1rem;
+}
+
+.links-cont::-webkit-scrollbar-track {
+    background-color: #dfdfdf;
+    border-radius: 50em;
+    cursor: pointer;
+}
+
+.links-cont::-webkit-scrollbar-thumb {
+    background-color: #111111;
+    border-radius: 50em;
+}
+
+.links-cont:hover::-webkit-scrollbar {
+    height: 4px;
+}
+
+.links-cont:hover::-webkit-scrollbar-thumb {
+    cursor: grab;
+}
+
+.links-cont:active::-webkit-scrollbar-thumb {
+    cursor: grabbing;
 }
 
 .last-li {
@@ -199,6 +235,7 @@ a {
 
 .text-cont {
     display: flex;
+    justify-content: space-between;
     color: #111111;
     margin-top: .5rem;
 }
@@ -211,6 +248,11 @@ a {
     display: flex;
     height: 300px;
     background-color: #FEDF02;
+    min-width: 250px;
+}
+
+.redirection:hover h2 {
+    text-decoration: underline;
 }
 
 .redirection > div {
@@ -239,4 +281,56 @@ a {
 .icon {
     display: flex;
     align-items: center;
+}
+
+.offer-cont .img-div {
+    overflow: hidden;
+}
+
+.offer-cont img {
+    transition: transform 0.3s ease;
+}
+
+.offer-cont:hover img {
+    transform: scale(1.035);
+}
+
+.offer-cont:hover h2 {
+    text-decoration: underline;
+}
+
+#section-6 {
+    margin: 4rem 0;
+    padding: 0 3rem;
+}
+
+#warning {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #111111;
+    color: white;
+}
+
+#warning h2, #warning p {
+    margin: 0;
+}
+
+#warning h2 {
+    margin-bottom: 2rem;
+}
+
+#warning button {
+    font-size: .75rem;
+    border: 1px solid white;
+    border-radius: 50em;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+#warning button:hover {
+    border: 2px solid white;
 }
