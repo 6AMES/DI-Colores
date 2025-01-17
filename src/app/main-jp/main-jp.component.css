@@ -145,8 +145,12 @@ h2 {
     height: 100%;
 }
 
+.img-cont > video {
+    width: 100%;
+}
+
 #section-6 .redirection {
-    background-color: #00853e;
+    background-color: #002952;
 }
 
 .links-cont {
@@ -233,7 +237,6 @@ a {
     height: 300px;
 }
 
-#section-3 .img-div,
 #section-5 .img-div {
     height: 500px;
 }
@@ -293,7 +296,7 @@ a {
     text-decoration: underline;
 }
 
-#section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
+#section-1, #section-2, #section-4, #section-5, #section-6, #section-7 {
     margin: 4rem 0;
     padding: 0 3rem;
 }
@@ -338,20 +341,6 @@ a {
     height: 400px !important;
 }
 
-#section-3 .redirection {
-    height: 500px;
-    background-color: #E01E37;
-}
-
-#section-3 .redirection > div {
-    justify-content: flex-end;
-}
-
-#section-3 .redirection > div > div {
-    margin-top: 1rem;
-}
-
-#section-3 .img-div,
 #section-5 .img-div {
     height: 240px;
     width: 240px;
@@ -359,7 +348,6 @@ a {
     justify-content: center;
 }
 
-#section-3 .offer-cont,
 #section-5 .offer-cont {
     display: flex;
     flex-direction: column;
@@ -433,7 +421,7 @@ a {
 
 #section-4 {
     display: grid;
-    height: 60em;
+    height: 50em;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
