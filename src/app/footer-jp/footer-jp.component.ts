@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { LanguageService } from '../language.service';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-footer-jp',
   imports: [],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  templateUrl: './footer-jp.component.html',
+  styleUrl: './footer-jp.component.css'
 })
-export class FooterComponent {
+export class FooterJpComponent {
     
     constructor(private languageService: LanguageService) {}
   

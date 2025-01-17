@@ -1,3 +1,20 @@
-<app-header />
-<router-outlet />
-<app-footer />
+<header *ngIf="language === 'es'">
+  <app-header></app-header>
+</header>
+<header *ngIf="language === 'jp'">
+  <app-header-jp></app-header-jp>
+</header>
+
+<main *ngIf="language === 'es'">
+  <app-main></app-main>
+</main>
+<main *ngIf="language === 'jp'">
+  <app-main-jp></app-main-jp>
+</main>
+
+<footer *ngIf="language === 'es'">
+  <app-footer></app-footer>
+</footer>
+<footer *ngIf="language === 'jp'">
+  <app-footer-jp></app-footer-jp>
+</footer>

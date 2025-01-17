@@ -4,12 +4,12 @@ import { RouterModule } from '@angular/router';
 import { LanguageService } from '../language.service';
 
 @Component({
-    selector: 'app-header',
+    selector: 'app-header-jp',
     imports: [CommonModule, RouterModule],
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.css']
+    templateUrl: './header-jp.component.html',
+    styleUrls: ['./header-jp.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderJpComponent implements OnInit {
     activeButton: string | null = null;
 
     constructor(private languageService: LanguageService) {}
