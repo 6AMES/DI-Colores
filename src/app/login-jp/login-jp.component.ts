@@ -1,11 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-login-jp',
-  imports: [],
+  selector: 'app-login',
+  imports: [CommonModule],
   templateUrl: './login-jp.component.html',
-  styleUrl: './login-jp.component.css'
+  styleUrls: ['./login-jp.component.css']
 })
 export class LoginJpComponent {
+  showLogin: boolean = true;
 
+  toggleForm(): void {
+    this.showLogin = !this.showLogin;
+  }
 }

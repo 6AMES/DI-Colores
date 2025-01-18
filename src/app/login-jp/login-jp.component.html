@@ -1,1 +1,77 @@
-<p>login-jp works!</p>
+<main>
+    <div class="container">
+        <form *ngIf="showLogin">
+          <h2>ログイン</h2>
+          <div class="form-group">
+            <label for="login-email">メールアドレス</label>
+            <input type="email" id="login-email" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">パスワード</label>
+            <input type="password" id="login-password" required>
+          </div>
+          <button type="button">ログイン</button>
+          <div class="switch-form">
+            <a (click)="toggleForm()">アカウントをお持ちではありませんか？登録する</a>
+          </div>
+        </form>
+      
+        <form *ngIf="!showLogin">
+          <h2>アカウントを作成する</h2>
+          <div class="form-group">
+            <label for="signup-firstname">名前</label>
+            <input type="text" id="signup-firstname" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-lastname">名字</label>
+            <input type="text" id="signup-lastname" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-birthdate">生年月日</label>
+            <input type="date" id="signup-birthdate" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-gender">性別</label>
+            <select id="signup-gender" required>
+              <option selected disabled value="">選択してください</option>
+              <option value="male">男性</option>
+              <option value="female">女性</option>
+              <option value="other">その他</option>
+              <option value="prefer-not-to-say">答えたくない</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="signup-mobile">携帯電話番号</label>
+            <input type="tel" id="signup-mobile" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-postal-code">郵便番号</label>
+            <input type="text" id="signup-postal-code" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-province">都道府県</label>
+            <input type="text" id="signup-province" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-city">市区町村</label>
+            <input type="text" id="signup-city" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-address">住所</label>
+            <input type="text" id="signup-address" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">メールアドレス</label>
+            <input type="email" id="signup-email" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">パスワード</label>
+            <input type="password" id="signup-password" required>
+          </div>
+          <button type="button">アカウントを作成する</button>
+          <div class="switch-form">
+            <a (click)="toggleForm()">すでにアカウントをお持ちですか？ログインする</a>
+          </div>
+        </form>
+      </div>
+</main>
