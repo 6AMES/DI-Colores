@@ -186,6 +186,10 @@ span > span {
     margin-left: .5rem;
 }
 
+.login {
+    cursor: pointer;
+}
+
 @media (max-width: 1200px) {
     #lists {
         flex-direction: column;

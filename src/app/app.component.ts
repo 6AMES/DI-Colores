@@ -1,23 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderJpComponent } from './header-jp/header-jp.component';
-import { MainJpComponent } from './main-jp/main-jp.component';
 import { FooterJpComponent } from './footer-jp/footer-jp.component';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from './language.service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [CommonModule,
-            AppComponent, 
             HeaderComponent,
-            HeaderJpComponent, 
-            MainComponent, 
-            MainJpComponent,
+            HeaderJpComponent,
             FooterComponent,
-            FooterJpComponent],
+            FooterJpComponent,
+            RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
